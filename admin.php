@@ -1,10 +1,10 @@
+<?php   session_start();  ?>
 <?php
-if ($_POST['pass'] == 'bob')
-{}
-else {
-  header('Location: index.php');
-}
- ?>
+      if(!isset($_SESSION['live']))
+       {
+           header("Location: index.php");  
+       }
+?>
 <?php
 $getfile = file_get_contents('data.json');
 $jsonfile = json_decode($getfile);
@@ -20,7 +20,7 @@ $jsonfile = json_decode($getfile);
 <style> *{ color: white; }</style><br>
 
 <div class="container">
-<h3>PHP CRUD using JSON &nbsp; <a class="btn btn-outline-primary" href="add.php">Add</a></h3>
+<h3>PHP CRUD using JSON &nbsp; <a class="btn btn-outline-primary" href="add.php">Add</a> <a class="btn btn-outline-danger float-right" href="logout.php">Logout</a></h3>
 
 <table class="table">
 <br>

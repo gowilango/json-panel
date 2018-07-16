@@ -1,3 +1,10 @@
+<?php   session_start();  ?>
+<?php
+      if(!isset($_SESSION['live']))
+       {
+           header("Location: index.php");  
+       }
+?>
 <?php
 if (isset($_GET["id"])) {
     $id = (int) $_GET["id"];
