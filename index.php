@@ -9,7 +9,7 @@ if(isset($_POST['login']))
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "gowtham15164@gmail.com" && $pass == "Gowtham@L22") 
+      if($user == "admin@admin.com" && $pass == "password") 
          {                                 
           $_SESSION['live']=$user;
           echo '<script type="text/javascript"> window.open("admin.php","_self");</script>';
